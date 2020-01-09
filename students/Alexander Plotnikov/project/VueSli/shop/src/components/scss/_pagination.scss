@@ -1,0 +1,127 @@
+.navPagination {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+}
+
+.paginationn {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.page-item:first-child,
+.page-item:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px * 100% / $widthBoby;
+    min-height: 90px;
+}
+
+.page-item:first-child>button,
+.page-item:last-child>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: inherit;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.page-item:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid $colBor;
+
+    &:hover {
+        background-color: rgb(190, 190, 216);
+    }
+
+    &:active>button>img {
+        transform: scale(1.2);
+    }
+}
+
+.page-item:first-child {
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid $colBor;
+
+    &:hover {
+        background-color: rgb(190, 190, 216);
+    }
+
+    &:active>button>img {
+        transform: scale(1.2);
+    }
+}
+
+.page-item:not(:first-child):not(:last-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    min-height: 90px;
+}
+
+.page-item:not(:first-child):not(:last-child)>button {
+    display: flex;
+    border: none;
+    outline: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: #3a405b;
+    font-size: 14px;
+    font-weight: 400;
+
+    text-decoration: none;
+    transition: transform 200ms;
+
+    &:hover {
+        box-shadow: 0 20px 40px rgba(168, 172, 185, 0.62);
+        background-color: #ffffff;
+        color: #b9bed1;
+        font-size: 14px;
+        font-weight: 400;
+
+        z-index: 400;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.page-item:nth-child(2) {
+    margin-left: auto;
+}
+
+.page-item:nth-last-child(2) {
+    margin-right: auto;
+}
+
+.page-link-active {
+    background-color: rgb(59, 59, 82) !important;
+    color: white !important;
+}
+
+@include to(700px) {
+
+    li.page-item:nth-child(5),
+    li.page-item:nth-child(6),
+    li.page-item:nth-child(7),
+    li.page-item:nth-child(8),
+    li.page-item:nth-child(9) {
+        display: none !important;
+    }
+
+    li.page-item:nth-child(4) {
+        margin-right: auto;
+    }
+}

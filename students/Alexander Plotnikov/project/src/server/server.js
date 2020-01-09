@@ -6,15 +6,15 @@ let cart = require('./cart')
 let workFile = require('./workWithFiles')
 
 const LINKBACK = {
-    cart: 'src/server/bd/responses/getBasket.json',
-    stats: 'src/server/bd/responses/stats.json',
-    catalog: 'src/server/bd/responses/catalogData.json',
-    addCart: 'src/server/bd/responses/addToBasket.json',
-    dellCart: 'src/server/bd/responses/deleteFromBasket.json'
+    cart: 'src/server/db/responses/getBasket.json',
+    stats: 'src/server/db/responses/stats.json',
+    catalog: 'src/server/db/responses/catalogData.json',
+    addCart: 'src/server/db/responses/addToBasket.json',
+    dellCart: 'src/server/db/responses/deleteFromBasket.json'
 }
 
 const LINKFRONT = {
-    cart: '/cart',
+    cart: '/cart.json',
     stats: '/stats',
     catalog: '/catalogData.json',
     addCart: '/addToBasket',
@@ -33,6 +33,9 @@ app.use(bodyParser.json())
 
 // обработка запроса к catalog
 app.get(LINKFRONT.catalog, function (req, res) {
+   
+    console.log('sdfgdf')
+
     workFile.getRespons(LINKBACK.catalog, res) // отправляем ответ
 })
 

@@ -13,7 +13,9 @@ let workFile = {
     },
     anyRespons(res) {
         res.send({
+            
             "result": 1
+
         })
     },
     write(linkFile, linkStats, data, action, res) {

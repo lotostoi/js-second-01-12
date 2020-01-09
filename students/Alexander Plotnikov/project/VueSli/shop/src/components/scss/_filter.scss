@@ -1,0 +1,316 @@
+.left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  
+  @include to(700px) {
+    .left {
+      width: 100%;
+    }
+  }
+  
+  .first {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px;
+  }
+  
+  .firstLi {
+    padding: 0 20px;
+    list-style: none;
+    min-height: 42px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $mr;
+    font-size: 13px;
+    color: #343e5c;
+    position: relative;
+  
+    &::after {
+      content: "";
+      display: flex;
+      width: 6px;
+      height: 10px;
+      background: url("./../assets/openicon.png") no-repeat center;
+      background-size: cover;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+  
+    &:hover {
+      background-color: #a8e3ee;
+    }
+  }
+  
+  .test {
+    display: flex;
+    height: 20px;
+    width: 30%;
+    margin: 10px;
+    background-color: green;
+  }
+  
+  .firstLi:not(:last-child) {
+    border-bottom: 1px solid $colBor;
+  }
+  
+  .availableAndBrand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 0px;
+  
+    &__inputInstorage,
+    &__inputCheck {
+      display: none;
+    }
+  
+    &__inputInstorage:checked~&__inStorage>&__contIcon {
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: auto;
+        background-color: $colgre;
+      }
+    }
+  
+    &__inputCheck:checked~&__nameCheck>&__contIconB {
+      background-image: url("./../assets/checkicon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      background-color: $colgre;
+      border: 2px solid $colgre;
+    }
+  
+    &__contIcon {
+      display: flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid $colBor;
+      margin-right: 15px;
+    }
+  
+    &__contIconB {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border: 2px solid $colBor;
+      margin-right: 15px;
+    }
+  
+    &__inStorage,
+    &__nameCheck {
+      align-items: center;
+      display: flex;
+      position: relative;
+    }
+  
+    &__count,
+    &__abrands,
+    &__quentlyBrands {
+      margin-left: auto;
+      font-family: $mr;
+      font-size: 11px;
+      color: #c1c7d8;
+    }
+  
+    &__abrands {
+      color: #2754eb;
+      text-transform: uppercase;
+    }
+  
+    &__li {
+      display: flex;
+      padding: 0 20px;
+      min-height: 42px;
+      align-items: center;
+      font-family: $mr;
+      font-size: 13px;
+      color: #343e5c;
+    }
+  
+    &__li:nth-child(1),
+    &__li:nth-child(3),
+    &__li:nth-child(4) {
+      border-bottom: 1px solid $colBor;
+    }
+  
+    &__li:last-child {
+      margin-bottom: 10px;
+    }
+  
+    &__inputCheck {
+      width: 20px;
+      height: 20px;
+      background-color: $colgre;
+  
+      &:checked {
+        @include placeholder() {
+          background-color: $colgre;
+        }
+      }
+    }
+  }
+  
+  .condition {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 0px;
+  
+    &__li {
+      @include flexCent();
+      padding: 0 20px 0 17px;
+      font-family: $mr;
+      color: #343e5c;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 36px;
+      list-style-type: none;
+    }
+  
+    &__li:first-child {
+      min-height: 48px;
+      border-bottom: 1px solid $colBor;
+    }
+  
+    &__li:nth-child(2) {
+      margin-top: 10px;
+    }
+  
+    &__li:nth-child(6) {
+      margin-bottom: 10px;
+    }
+  
+    &__brands {
+      color: #343e5c;
+      text-transform: uppercase;
+    }
+  
+    &__abrands {
+      color: #2754eb;
+      text-transform: uppercase;
+      margin-left: auto;
+    }
+  
+    &__nameCheck {
+      @include flexCent();
+    }
+  
+    &__inputCheck {
+      display: none;
+    }
+  
+    &__inputCheck:checked~&__nameCheck>&__contIconB {
+      background-image: url("./../assets/checkicon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+      background-color: $colgre;
+      border: 2px solid $colgre;
+    }
+  
+    &__contIconB {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border: 2px solid $colBor;
+      margin-right: 15px;
+    }
+  }
+  
+  .deliveryOptions {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    padding: 0px;
+  
+    &__name {
+      width: 100%;
+      @include flexCent();
+      padding: 0 20px;
+      min-height: 48px;
+      color: #343e5c;
+      text-transform: uppercase;
+      border-bottom: 1px solid $colBor;
+      font-family: $mr;
+    }
+  
+    &__contCheck {
+      @include flexCent();
+      width: 50%;
+      min-height: 47px;
+      box-sizing: border-box;
+      color: #343e5c;
+      font-family: $mr;
+      padding: 0 20px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 36px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+  
+    &__contCheck:last-child {
+      border-left: 1px solid $colBor;
+    }
+  
+    &__input {
+      display: none;
+    }
+  
+    &__label {
+      @include flexCent();
+    }
+  
+    &__contIcon {
+      display: flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid $colBor;
+      margin-right: 15px;
+    }
+  
+    &__input:checked~&__label>&__contIcon {
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: auto;
+        background-color: $colgre;
+      }
+    }
+  }
