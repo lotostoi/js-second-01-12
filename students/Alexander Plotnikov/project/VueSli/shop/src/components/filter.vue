@@ -1,12 +1,12 @@
 <template>
       <aside class="left">
-          <ul class="first">
+         <!--  <ul class="first">
             <li class="firstLi">Top Sales</li>
             <li class="firstLi">Brand Focus</li>
             <li class="firstLi">Hi-Tech</li>
             <li class="firstLi">Home</li>
             <li class="firstLi">Sale</li>
-          </ul>
+          </ul> -->
           <ul class="availableAndBrand">
             <li class="availableAndBrand__li">Available</li>
             <li class="availableAndBrand__li availableAndBrand__contInput">
@@ -87,7 +87,7 @@
               <span class="availableAndBrand__quentlyBrands">3</span>
             </li>
           </ul>
-          <ul class="condition">
+        <!--   <ul class="condition">
             <li class="condition__li">
               <span class="condition__brands">Condition</span>
               <a href="#" class="condition__abrands"> See All</a>
@@ -135,7 +135,7 @@
                 For Parts or not Working
               </label>
             </li>
-          </ul>
+          </ul> -->
           <div class="deliveryOptions">
             <span class="deliveryOptions__name">Delivery Options</span>
             <div class="deliveryOptions__contCheck">

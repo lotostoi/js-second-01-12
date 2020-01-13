@@ -1,0 +1,9 @@
+{
+    "watch": ["server"],
+   
+    "ignore": ["*.json"],
+    
+    "execMap": {
+      "ts": "ts-node"
+    }
+  }
